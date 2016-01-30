@@ -1,0 +1,139 @@
+
+
+/* --- COULEURS --- */
+
+/* Général */
+body {
+	background: #EEEEEE;
+}
+a {
+	color: #FFFFFF;
+}
+a:hover, a:focus {
+	color: #000000;
+}
+strong {
+	color: #A1B55D;
+}
+
+/* En-Tête */
+#entete {	
+	background: #2E9AFE;	
+	color: #FFFFFF;
+}
+
+/* Actions */
+#action {	
+	background: #2E9AFE;	
+	color: #FFFFFF;
+}
+
+#action a:hover, #action a:focus {
+	background: #FFFFFF;
+}
+
+/* Contenu principal */
+#principal {
+	color: #181A12;
+	background: #FFFFFF;
+}
+#principal a {
+	color: #332510;
+}
+#principal a:hover, #principal a:focus {
+	color: #6E5122;
+}
+#principal strong {
+	color: #181A12;
+}
+
+/* Contenu etat */
+#etat {
+	background: #2E9AFE;	
+	color: #FFFFFF;
+}
+
+
+
+/* --- POSITIONNEMENT --- */
+
+/* Page */
+body {
+	padding: 20px 30px;
+	width: 800px;
+}
+
+/* En-tête */
+#entete {
+	padding: 20px 20px;
+	margin: 10px 0;
+	text-align:center;
+}
+#entete h1 {
+	margin: 0;
+}
+#entete h1 img {
+	float: left;
+	margin: 7px 20px 10px 0;
+}
+#entete .sous-titre {
+	margin: 4px 0 15px 0;
+}
+
+/* Bloc central */
+#centre {
+	position: relative;
+}
+
+/* Menu d'actions */
+#action {
+	position: absolute; 
+	top: 0;
+	left: 0;
+	width: 180px;
+	padding: 10px 20px;
+}
+#action ul {
+	margin: 0;
+	padding: 20px 10px 20px 10px;
+	list-style: none;
+}
+#action a {
+	display: block;
+	height: 1%;
+	padding: 6px 10px 6px 10px;
+	line-height: 1.5;
+	font-size: .9em;
+	text-decoration: none;
+}
+
+/* Contenu principal */
+#principal {
+	margin-left: 240px; /* -> 2 */
+	margin-right: 240px; /* -> 2 */
+	padding: 10px 20px;
+	text-align:center;
+}
+#principal > :first-child {
+	margin-top: 10px;
+}
+#principal p, #principal li {
+	line-height: 1.5;
+}
+
+/* Bloc etat */
+#etat {
+	position: absolute; /* -> 1 */
+	top: 0;
+	right: 0;
+	width: 180px;
+	padding: 10px 20px;
+}
+
+/* Mention de copyright */
+#copyright {
+	margin: 20px 0;
+	font-size: .85em;
+	text-align: left;
+}
+
