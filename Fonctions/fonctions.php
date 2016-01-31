@@ -15,7 +15,7 @@ function getMimimoFromDB($iID)
 		$aResult = mysql_query ($sQuery, $link ); 
 
 		$aRow = mysql_fetch_assoc($aResult);
-		return new Mimimo($iID, $aRow['NOM'],$aRow['MESSAGE'],$aRow['AGE'],$aRow['SANTE'],$aRow['FAIM'],$aRow['HUMEUR'],$aRow['PROPRETE'],$aRow['ENERGIE'],$aRow['ETAT']);
+		return new Mimimo($iID, $aRow['NOM'],$aRow['AGE'],$aRow['SANTE'],$aRow['FAIM'],$aRow['HUMEUR'],$aRow['PROPRETE'],$aRow['ENERGIE'],$aRow['ETAT']);
 		mysql_close($link);
     }
 

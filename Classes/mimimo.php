@@ -12,6 +12,7 @@ class Mimimo
     public $iEnergie;
     public $sMessage;
     public $iEtat;
+    public $sImage;
  
 
     // Constantes 
@@ -23,11 +24,11 @@ class Mimimo
  	const EVEILLE = 1;
  
     // Méthodes  
-    public function __construct($iID, $sNom, $sMessage, $iAge, $iSante, $iFaim, $iHumeur, $iProprete, $iEnergie, $iEtat) 
+    public function __construct($iID, $sNom, $iAge, $iSante, $iFaim, $iHumeur, $iProprete, $iEnergie, $iEtat) 
     {
         $this->iID=$iID;
         $this->sNom=$sNom;
-        $this->sMessage=$sMessage;
+        $this->sMessage=$this->sNom." est heureux de vous voir";
         $this->iAge=$iAge;
         $this->iSante=$iSante;
         $this->iFaim=$iFaim;
@@ -35,6 +36,7 @@ class Mimimo
         $this->iProprete=$iProprete;
         $this->iEnergie=$iEnergie;
         $this->iEtat=$iEtat;
+        $this->sImage="mimimo_bonjour.gif";
     }
  
     public function nourrir()
@@ -48,12 +50,14 @@ class Mimimo
     		$this->iFaim=self::MAX_POINTS;
     		$this->sMessage=$this->sNom.' n\'a plus faim';
     	}
+        $this->sImage="mimimo_mange.gif";
     }
  
     public function laver()
     {
     	$this->iProprete=self::MAX_POINTS;
     	$this->sMessage=$this->sNom.' est propre';
+        $this->sImage="mimimo_bain.gif";
     }
 
     public function jouer()
@@ -61,12 +65,12 @@ class Mimimo
     	if ($this->iHumeur + self::NB_POINTS_JEUX < self::MAX_POINTS)    
     	{
     		$this->iHumeur=$this->iHumeur+self::NB_POINTS_JEUX;
-    		$this->sMessage=$this->sNom.' s\'est bien amusé';
     	}else    
     	{
     		$this->iHumeur=self::MAX_POINTS;
-    		$this->sMessage=$this->sNom.' n\'a plus envie de jouer';
-    	}
+    	} 
+        $this->sMessage=$this->sNom.' s\'est bien amusé';
+        $this->sImage="mimimo_content.gif";
     }
 
     public function maj()

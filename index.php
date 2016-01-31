@@ -11,9 +11,7 @@ include_once 'Classes/mimimo.php';
 session_start ();
 if (isset($_SESSION['mimimo'])==false) {
 
-
 	$_SESSION['mimimo'] = getMimimoFromDB(1);
-
 	
 }	
 $oMimimo = $_SESSION['mimimo'];
@@ -42,7 +40,6 @@ $oMimimo = $_SESSION['mimimo'];
 						<li><a href="Fonctions/actions.php?type=nourrir">Nourrir</a></li>
 						<li><a href="Fonctions/actions.php?type=jouer">Jouer</a></li>
 						<li><a href="Fonctions/actions.php?type=laver">Laver</a></li>
-						<li><a href="Fonctions/actions.php?type=crottes">Ramasser les crottes</a></li>
 					</ul>
 				</div>
 	          <div id="etat">
@@ -56,11 +53,9 @@ $oMimimo = $_SESSION['mimimo'];
 					</ul>
 	          </div>	          
 	          <div id="principal">
-	          	o o 
-	          	</br>
-	          	_
-	          	</br></br>
 	          	<?php
+	          		echo '<img src="Images/'.$oMimimo->sImage.'" alt="'.$oMimimo->sMessage.'">';
+	          	    echo "</br></br>";
 	          		echo $oMimimo->sMessage;
 	          	?>
 	          </div>
