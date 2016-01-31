@@ -10,9 +10,7 @@ include_once 'Classes/mimimo.php';
 /*  SESSION  */
 session_start ();
 if (isset($_SESSION['mimimo'])==false) {
-
-	$_SESSION['mimimo'] = getMimimoFromDB(1);
-	
+	header('Location: login.php');	
 }	
 $oMimimo = $_SESSION['mimimo'];
 
