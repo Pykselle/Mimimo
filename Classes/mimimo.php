@@ -39,8 +39,7 @@ class Mimimo
  
     public function nourrir()
     {
-        //TODO : Fix (tester plutot si iFaim < MAX_POINTS-NB_POINTS_REPAS)
-    	if ($this->iFaim < self::NB_POINTS_REPAS)    
+    	if ($this->iFaim + self::NB_POINTS_REPAS < self::MAX_POINTS)    
     	{
     		$this->iFaim=$this->iFaim+self::NB_POINTS_REPAS;
     		$this->sMessage=$this->sNom.' a bien mangé';
@@ -59,8 +58,7 @@ class Mimimo
 
     public function jouer()
     {
-        //TODO : Fix
-    	if ($this->iHumeur < self::NB_POINTS_JEUX)    
+    	if ($this->iHumeur + self::NB_POINTS_JEUX < self::MAX_POINTS)    
     	{
     		$this->iHumeur=$this->iHumeur+self::NB_POINTS_JEUX;
     		$this->sMessage=$this->sNom.' s\'est bien amusé';
